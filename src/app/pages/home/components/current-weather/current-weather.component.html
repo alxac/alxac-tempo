@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body">
+        <h2>{{ cityWeather.city.name }}</h2>
+        <alx-detailed-weather [weather]="cityWeather.weather"></alx-detailed-weather>
+        <div class="card-actions">
+            <a class="card-link" (click)="onToggleBookmarks()">
+                {{ isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos' }}
+            </a>
+            <a class="card-link" [routerLink]="['../details']">
+                detalhes
+            </a>
+        </div>
+    </div>
+</div>
